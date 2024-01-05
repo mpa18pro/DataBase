@@ -1,3 +1,4 @@
+-- CONNECTION: name=music 2
 -- request Genre-Singer
 CREATE TABLE IF NOT EXISTS Genre (
 	id SERIAL PRIMARY KEY,
@@ -60,6 +61,6 @@ CREATE TABLE IF NOT EXISTS Track (
 -- request Track-Digest
 CREATE TABLE IF NOT EXISTS TrackDigest (
 	id SERIAL PRIMARY KEY,
-	track_id INTEGER NOT NULL REFERENCES Album(id),
+	track_id INTEGER NOT NULL REFERENCES Track (id),
 	digest_id INTEGER NOT NULL REFERENCES Digest(id)
 );

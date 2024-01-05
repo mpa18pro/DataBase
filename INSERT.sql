@@ -1,3 +1,4 @@
+-- CONNECTION: name=music 2
 INSERT INTO Genre(title) 
 VALUES
 ('Rock'),
@@ -50,22 +51,16 @@ VALUES
 --
 
 
-INSERT INTO AlbumDigest(album_id, digest_id) 
-VALUES
-(1, 2),
-(2, 4),
-(3, 3),
-(4, 4);
---
 
-
-INSERT INTO Track(id, title, duration, album_id) 
+INSERT INTO Track(title, duration, album_id) 
 VALUES
-('Brothers in Arms', 420, 1),
-('So Far Away', 312, 1),
-('First We Take Manhattan', 224, 2),
+('I did it myself', 420, 1),
+('Не мой день', 312, 1),
+('Песня-помойка', 224, 2),
 ('My Father_s Son', 269, 2),
-('River of Tears', 442, 3),
+('Не мой', 442, 3),
+('My', 263, 4),
+('Amy', 263, 4),
 ('Happy New Year', 263, 4);
 --
 
@@ -75,4 +70,8 @@ VALUES
 (1, 2),
 (2, 3),
 (3, 4),
-(4, 4);
+(4, 1),
+(5, 4),
+(6, 4),
+(7, 4);
+--

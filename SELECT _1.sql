@@ -1,3 +1,4 @@
+-- CONNECTION: name=music 2
 -- Название и продолжительность самого длительного трека.
 SELECT title, duration FROM Track
 WHERE duration = (SELECT MAX(duration) FROM Track);
@@ -22,5 +23,13 @@ WHERE name_ NOT LIKE '% %';
 
 -- Название треков, которые содержат слово «мой» или «my».
 SELECT title FROM Track
-WHERE LOWER (title) LIKE '%my%' OR LOWER (title) LIKE '%мой%';
+WHERE title ILIKE 'my'  
+OR title ILIKE 'мой' 
+OR title ILIKE '% my' 
+OR title ILIKE '% мой' 
+OR title ILIKE 'my %' 
+OR title ILIKE 'мой %' 
+OR title ILIKE '% my %' 
+OR title ILIKE '% мой %'
+;
 --
