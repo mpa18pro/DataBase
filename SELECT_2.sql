@@ -21,8 +21,8 @@ ORDER BY album_id;
 SELECT DISTINCT s.name_ FROM Singer s
 WHERE s.name_ NOT IN (
 	SELECT DISTINCT s.name_ FROM Singer s
-	LEFT JOIN AlbumSinger a_s ON s.id = a_s.id
-	LEFT JOIN Album a ON a_s.id = a.id
+	LEFT JOIN AlbumSinger a_s ON s.id = a_s.singer_id
+	LEFT JOIN Album a ON a_s.album_id = a.id
 	WHERE release_year = 2020);
 --
 
