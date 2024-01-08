@@ -42,13 +42,6 @@ CREATE TABLE IF NOT EXISTS Digest (
 );
 
 
-CREATE TABLE IF NOT EXISTS AlbumDigest (
-	id SERIAL PRIMARY KEY,
-	album_id INTEGER NOT NULL REFERENCES Album(id),
-	digest_id INTEGER NOT NULL REFERENCES Digest(id)
-);
-
-
 -- request Album-Track
 CREATE TABLE IF NOT EXISTS Track (
 	id SERIAL PRIMARY KEY,
