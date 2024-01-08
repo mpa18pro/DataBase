@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS AlbumSinger (
 );
 
 
--- request Album-Digest
+-- request Album
 CREATE TABLE IF NOT EXISTS Digest (
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(40) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS Digest (
 );
 
 
--- request Album-Track
+-- request Track
 CREATE TABLE IF NOT EXISTS Track (
 	id SERIAL PRIMARY KEY,
 	title VARCHAR(40) NOT NULL,
